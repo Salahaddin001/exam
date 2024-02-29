@@ -3,10 +3,13 @@ import random
 while True: 
     get_player_choice = input("Сделайте выбор — камень, ножницы или бумага: ")
     choise = ["камень", "бумага", "ножницы"]
+    """игрок выбирает значение"""
     get_computer_choice = random.choice(choise)
-    print(f"\nВы выбрали {get_player_choice}, компьютер выбрал {get_computer_choice}.\n")
+    """компьютер выбирает значение"""
+    print(f"\n Вы выбрали {get_player_choice}, компьютер выбрал {get_computer_choice}.\n")
     if get_player_choice == get_computer_choice:
         print(f"Оба пользователя выбрали {get_player_choice}. Ничья!!")
+        """ничья"""
     elif get_player_choice == "камень":
         if get_computer_choice == "ножницы":
             print("Камень бьет ножницы! Вы победили!")
@@ -22,7 +25,10 @@ while True:
             print("Ножницы режут бумагу! Вы победили!")
         else:
             print("Камень бьет ножницы! Вы проиграли.")
+            """варианты побед и проигрышей"""
     play_game = "" 
-    play_game = input("Сыграем еще? (д/н): ") 
+    play_game = input("Сыграем еще? (д/н): ")
+    """рестарты""" 
     if play_game.lower() != "д": 
         break 
+    """остановка"""
